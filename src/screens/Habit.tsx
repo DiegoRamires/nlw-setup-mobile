@@ -52,6 +52,14 @@ export function Habit() {
     }
   }
 
+  async function handleToggleHabit(habitId: string) {
+    if(completedHabits.includes(habitId)) {
+      setCompletedHabits(prevState => prevState.filter(habit => habit !== habitId));
+    } else {
+      setCompletedHabits(prevState => [...prevState, habitId]);
+    }
+  }
+
   useEffect(() => {
     fetchHabits()
   }, [])
@@ -89,6 +97,7 @@ export function Habit() {
                     key={habit.id}
                     title={habit.title}
                     checked={completedHabits.includes(habit.id)}
+                    onPress={() => handleToggleHabit(habit.id)}
                   />
                 )
               })
