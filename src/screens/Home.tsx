@@ -15,10 +15,10 @@ const datesFromYearStart = generateRangeDatesFromYearStart();
 const minimumSummaryDatesSizes = 18 * 5;
 const amountOfDaysToFill = minimumSummaryDatesSizes - datesFromYearStart.length;
 
-type SummaryProps = Array <{
+type SummaryProps = Array<{
   id: string;
   date: string;
-  amout: number;
+  amount: number;
   completed: number;
 }>
 
@@ -88,7 +88,7 @@ export function Home() {
                     key={date.toISOString()}
                     onPress={() => navigate('habit', {date: date.toISOString() })}
                     date={date}
-                    amountOfHabits={dayWithHabits?.amout}
+                    amountOfHabits={dayWithHabits?.amount}
                     amountCompleted={dayWithHabits?.completed}
                   />
                 )
