@@ -10,6 +10,7 @@ import { ProgressBar } from "../components/ProgressBar";
 import { CheckBox } from "../components/CheckBox";
 import { Loading } from "../components/Loading";
 import { generateProgressPercentage } from "../utils/generate-progress-percentage";
+import { HabitsEmpty } from "../components/HabitsEmpty";
 
 interface Params {
   date: string;
@@ -106,7 +107,7 @@ export function Habit() {
                   />
                 )
               })
-              : ''
+              : <HabitsEmpty />
           }
         </View>
       </ScrollView>
