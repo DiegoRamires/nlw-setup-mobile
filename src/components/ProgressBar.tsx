@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { View } from "react-native";
 import Animated, {
-  useAnimatedStyle, useSharedValue, withTiming, withDelay
+  useAnimatedStyle, useSharedValue, withTiming
 } from "react-native-reanimated";
 
 interface Props {
@@ -18,7 +18,7 @@ export function ProgressBar({ progress = 0 }: Props) {
   });
 
   useEffect(() => {
-    sharedProgress.value = withDelay(200, withTiming(progress));
+    sharedProgress.value = withTiming(progress);
   }, [progress]);
 
   return (
