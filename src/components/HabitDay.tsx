@@ -44,7 +44,7 @@ export function HabitDay({
         ["bg-violet-300 border-violet-400"] : amountAccomplishedPercentage >= 20 && amountAccomplishedPercentage < 40,
         ["bg-violet-500 border-violet-600"] : amountAccomplishedPercentage >= 40 && amountAccomplishedPercentage < 60,
         ["bg-violet-700 border-violet-800"] : amountAccomplishedPercentage >= 60 && amountAccomplishedPercentage < 80,
-        ["bg-violet-900 border-violet-800"] : amountAccomplishedPercentage > 80,
+        ["bg-violet-900 border-violet-800"] : amountAccomplishedPercentage >= 80,
         ["border-white border-3"]: isCurrent
       })}
     />
